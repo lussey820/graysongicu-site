@@ -5,6 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GraySongICU — 让灰掉的歌，重新响起来</title>
 <meta name="description" content="GraySongICU：把 B站、苹果播客与小宇宙里的声音，上传到你的网易云音乐云盘。音乐、评书、戏曲、播客、助眠，一个入口补齐。">
+<link rel="canonical" href="https://lussey820.github.io/graysongicu-site/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" content="#ec4141">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GraySongICU">
+<meta property="og:title" content="GraySongICU — 让灰掉的歌，重新响起来">
+<meta property="og:description" content="把 B站、苹果播客与小宇宙里的声音，上传到你的网易云音乐云盘。Windows 10 / 11 桌面版，本机运行。">
+<meta property="og:url" content="https://lussey820.github.io/graysongicu-site/">
+<meta property="og:image" content="https://lussey820.github.io/graysongicu-site/og.jpg">
+<meta property="og:image:width" content="2560">
+<meta property="og:image:height" content="1440">
+<meta name="twitter:card" content="summary_large_image">
 <style>
   :root{
     --red:#ec4141;
@@ -332,8 +344,6 @@
     .wrap,.nav-in{width:calc(100% - 32px)}
     .nav-links{display:none}
     .nav-cta{font-size:12.5px;padding:8px 13px}
-    .nav-contact{display:none}
-    .nav-pop-wrap{display:none}
     .hero{padding-top:112px;padding-bottom:52px}
     .section{padding:72px 0}
     .source-grid,.bento,.assure-grid{grid-template-columns:1fr}
@@ -400,7 +410,7 @@
           <em>15895898554</em>
         </div>
       </div>
-      <a class="nav-cta" href="https://github.com/lussey820/GraySongICU/releases/download/v1.0.2/GraySongICU-Setup-1.0.2.exe">开始下载
+      <a class="nav-cta" href="https://github.com/lussey820/GraySongICU/releases/latest/download/GraySongICU-Setup.exe">开始下载
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
     </div>
@@ -428,7 +438,7 @@
       <h1>让灰掉的歌，<br><span class="grad">重新响起来。</span></h1>
       <p class="lead">GraySongICU 把 <b>B站、苹果播客与小宇宙</b>里的声音，送进你的网易云音乐云盘。音乐、评书、戏曲、播客、助眠，一个入口全部补齐。</p>
       <div class="actions">
-        <a class="btn btn-primary" href="https://github.com/lussey820/GraySongICU/releases/download/v1.0.2/GraySongICU-Setup-1.0.2.exe">
+        <a class="btn btn-primary" href="https://github.com/lussey820/GraySongICU/releases/latest/download/GraySongICU-Setup.exe">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M6 9l6 6 6-6M4 21h16"/></svg>
           开始下载
         </a>
@@ -773,11 +783,13 @@
           <summary>需要额外安装东西吗？<span class="plus"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></summary>
           <p>不用。上传、搜索、看歌词都不需要额外安装；只有给没有时间轴的音频自动补歌词时间时，才会用到本地识别工具，没装也不影响其他功能。</p>
         </details>
+        <details>
+          <summary>安装时提示「未知发布者」怎么办？<span class="plus"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p>安装包暂未做代码签名，Windows SmartScreen 可能提示「未知发布者」。点「更多信息」→「仍要运行」即可，安装包来自本页面的 GitHub Releases 官方地址，可用 Release 页公布的 SHA256 校验完整性。</p>
+        </details>
       </div>
     </div>
   </section>
-
-  <!-- CTA -->
   <section class="cta wrap">
     <div class="cta-in reveal">
       <h2>歌单灰了一半，从第一首补起。</h2>
@@ -806,6 +818,7 @@
           <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>
           GitHub 仓库
         </a>
+        <a href="privacy.html">隐私说明</a>
         <a href="https://github.com/lussey820/GraySongICU/issues" target="_blank" rel="noopener">
           <svg class="stroke" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
           联系我们 / 问题反馈

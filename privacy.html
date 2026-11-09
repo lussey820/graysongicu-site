@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>隐私说明 — GraySongICU</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="robots" content="index,follow">
+<style>
+  :root{
+    --red:#ec4141;--ink:#17171b;--ink-2:#3c3c44;--muted:#6e6e78;--bg:#f6f6f8;--card:#fff;--line:#e8e8ee;
+    --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,"Segoe UI",sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:var(--font);background:var(--bg);color:var(--ink-2);line-height:1.85;font-size:15px;-webkit-font-smoothing:antialiased}
+  .wrap{width:min(760px,calc(100% - 40px));margin:0 auto}
+  header{border-bottom:1px solid var(--line);background:rgba(255,255,255,.86);backdrop-filter:blur(8px);position:sticky;top:0}
+  .nav{display:flex;align-items:center;gap:12px;height:64px}
+  .brand{display:flex;align-items:center;gap:9px;font-weight:700;color:var(--ink);text-decoration:none;font-size:15px}
+  .brand img{width:26px;height:26px;border-radius:7px}
+  .back{margin-left:auto;font-size:13.5px;color:var(--muted);text-decoration:none}
+  .back:hover{color:var(--red)}
+  main{padding:56px 0 72px}
+  h1{font-size:30px;color:var(--ink);letter-spacing:-.02em;margin-bottom:10px}
+  .date{font-size:13px;color:var(--muted);margin-bottom:34px}
+  h2{font-size:17px;color:var(--ink);margin:34px 0 10px}
+  p{margin-bottom:10px}
+  ul{margin:8px 0 10px 20px}
+  li{margin-bottom:6px}
+  code{font-family:Consolas,Menlo,monospace;font-size:13px;background:#f1f1f5;border-radius:5px;padding:2px 6px;color:var(--ink-2)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin-top:14px}
+  footer{border-top:1px solid var(--line);padding:26px 0 40px;font-size:13px;color:var(--muted)}
+  footer a{color:var(--muted)}
+</style>
+</head>
+<body id="top">
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><img src="favicon.svg" alt="">GraySongICU</a>
+    <a class="back" href="index.html">← 返回首页</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>隐私说明</h1>
+  <div class="date">最后更新：2026-11-09</div>
+
+  <p>GraySongICU 是一个在你自己电脑上运行的 Windows 桌面工具。这份说明告诉你，软件在你使用时会产生哪些数据、分别存在哪里。</p>
+
+  <h2>一、我们不收集什么</h2>
+  <div class="card">
+    <ul>
+      <li>没有账号体系，不需要注册，也不收集你的手机号、邮箱或设备标识。</li>
+      <li>没有统计后台，不收集使用行为、崩溃上报或埋点数据。</li>
+      <li>不会把你的播放记录、歌单、上传历史上传到我们的服务器——本项目没有服务器。</li>
+    </ul>
+  </div>
+
+  <h2>二、存在你本机的数据</h2>
+  <div class="card">
+    <ul>
+      <li>登录凭据（网易云、B站）：使用 Windows 系统加密（DPAPI）后保存在 <code>%APPDATA%\GraySongICU\cookie.enc</code>，只有同一台电脑的同一账户能解密。</li>
+      <li>上传历史与歌词索引（<code>history.json</code>、<code>lyrics.json</code> 等）：仅用于界面展示和避免重复上传。</li>
+      <li>运行日志：<code>%APPDATA%\GraySongICU\*.log</code>，超过 5MB 自动归档，90 天后自动删除。</li>
+      <li>离线补歌词组件（可选）：<code>%APPDATA%\GraySongICU\asr-pack\</code>，只在安装器里勾选或手动下载后才会存在。</li>
+    </ul>
+    <p>删除整个 <code>%APPDATA%\GraySongICU</code> 目录即可清空以上全部数据。</p>
+  </div>
+
+  <h2>三、需要联网的请求</h2>
+  <div class="card">
+    <ul>
+      <li>直接访问哔哩哔哩、网易云音乐、苹果播客、小宇宙的公开接口，获取音频与元数据；携带的是你自己的登录态。</li>
+      <li>访问 GitHub（<code>api.github.com</code>）检查是否有新版本，每天最多一次，只发送版本号。</li>
+      <li>应用启动时会在本机 <code>127.0.0.1</code> 上监听一个随机端口供界面使用，不对局域网或公网开放。</li>
+    </ul>
+    <p>除以上请求外，软件不会主动向其他地址发送数据；离线识别组件在本地运行，不联网。</p>
+  </div>
+
+  <h2>四、第三方内容与版权</h2>
+  <p>软件只提供下载与上传的技术通道，内容版权归原始权利人所有。请在遵守哔哩哔哩、网易云音乐及相关平台的用户协议与法律法规的前提下使用，上传内容仅限本人收听，请勿用于商业用途或再次分发。</p>
+
+  <h2>五、联系</h2>
+  <p>如对本说明有疑问，或希望删除某条内容，可通过微信 / 手机 <b>15895898554</b>，或在 <a href="https://github.com/lussey820/GraySongICU/issues" target="_blank" rel="noopener">GitHub Issues</a> 联系我们。</p>
+  <p>本说明如有变更，会更新在本页面顶部日期。</p>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 GraySongICU · <a href="index.html">返回首页</a> · <a href="https://github.com/lussey820/GraySongICU" target="_blank" rel="noopener">GitHub 仓库</a></div>
+</footer>
+</body>
+</html>
