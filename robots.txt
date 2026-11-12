@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lussey820.github.io/graysongicu-site/sitemap.xml
+Sitemap: https://graysongicu.cn/sitemap.xml
